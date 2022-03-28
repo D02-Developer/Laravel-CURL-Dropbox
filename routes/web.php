@@ -23,3 +23,11 @@ Route::get('upload', [FileUploadController::class, 'curlCall']);
 // Route::post('image', [FileUploadController::class, 'uploadImage']);
 
 Route::post('image', [FileUploadController::class, 'imageRequest']);
+
+// Route::post('image', [FileUploadController::class, 'getToken']);
+
+Route::get('token', [FileUploadController::class, 'getToken']);
+
+Route::get('dropbox', function () {
+    return view('dropbox');
+});
