@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('welcome', function () {
     return view('welcome');
 });
 
@@ -28,6 +28,6 @@ Route::post('image', [FileUploadController::class, 'imageRequest']);
 
 Route::get('token', [FileUploadController::class, 'getToken']);
 
-Route::get('dropbox', function () {
+Route::get('/', function () {
     return view('dropbox');
 });

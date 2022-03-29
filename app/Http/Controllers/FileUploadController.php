@@ -120,7 +120,8 @@ class FileUploadController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($ch);
-        dd($response);
+        // return view('dropbox');
+        dd(json_decode($response));
 
         curl_close($ch);
     }
